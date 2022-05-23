@@ -9,7 +9,7 @@ builder.Services.AddSwaggerGen();
 
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddScoped<ILocationDL, LocationDL>();
+builder.Services.AddSingleton<ILocationDL, LocationDL>();
 builder.Services.AddScoped<ILocationBL, LocationBL>();
 var app = builder.Build();
 
